@@ -1,0 +1,234 @@
+body, html {
+  height: 100%;
+}
+.bg {
+  background-image: url("https://s25.postimg.org/ubhda21kv/simon3.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body {
+  font-family: 'Cutive Mono', monospace;
+}
+
+h1 {
+  font-size: 6em;
+  letter-spacing: 15px;
+  font-family: 'Unica One', cursive;
+}
+
+.stTitle {
+  color: #fff;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 550px;
+  margin: 0 auto;
+  border: 8px solid rgba(0, 0, 0, 0.6);
+  border-radius: 3px;
+  background-color: #fff;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  flex-grow: 1;
+  margin: 3px;
+  flex-wrap: wrap;
+  font-size: 5em;
+  box-shadow: 0 0 5px black;
+  border-radius: 2px;
+}
+
+.box1 {
+  background-color: #2b5ba8;
+}
+.box2 {
+  background-color: #c64b03;
+}
+.box3 {
+  background-color: #04a532;
+}
+.box4 {
+  background-color: #04a39b;
+}
+
+.light1 {
+  background-color: #3878e0;
+}
+.light2 {
+  background-color: #ff5d00;
+}
+.light3 {
+  background-color: #04d640;
+}
+.light4 {
+  background-color: #04c9bf;
+}
+
+.start {
+  font-size: 2em;
+  letter-spacing: 8px;
+  width: 250px;
+  background-color: #3ad334;
+  border: none;
+  border-radius: 20px;
+}
+
+.start:hover {
+  background-color: #41ed3b;
+  transform: scale(1.03);
+}
+
+.start:focus {
+  color: #fff;
+  background-color: #3ad334;
+  border: none;
+  outline: none;
+}
+
+.reset {
+  display: none;
+  font-size: 2em;
+  letter-spacing: 8px;
+  width: 250px;
+  background-color: #3ad334;
+  border: none;
+  border-radius: 20px;
+}
+
+.reset:hover {
+  background-color: #41ed3b;
+  transform: scale(1.03);
+}
+
+.reset:focus {
+  color: #fff;
+  background-color: #3ad334;
+  border: none;
+  outline: none;
+}
+
+.count {
+  visibility: hidden;
+  font-size: 2.5em;
+  letter-spacing: 5px;
+  font-family: 'Unica One', cursive;
+  color: #fff;
+}
+
+.countDisp {
+  color: #3ad334;
+  font-size: 1.5em;
+}
+
+.alert {
+  visibility: hidden;
+  position: absolute;
+  margin-left: 26%;
+  margin-top: 5%;
+  font-size: 2em;
+}
+
+#winModal h3 {
+  text-align: center;
+  font-size: 2.5em;
+  color: #3ad334;
+  background-color: #fff;
+  letter-spacing: 5px;
+}
+
+#winModal p {
+  font-size: 1.6em;
+  background-color: #fff;
+}
+
+#winModal .modal-content {
+  background-image: url('https://s25.postimg.org/h281np27z/celeb2.gif');
+}
+
+/*    */
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  display: none;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #3ad334;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+@media only screen and (max-width: 420px) {
+  body {
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  .bg {
+    background-image: none;
+  }
+
+  .btn {
+    margin-bottom: 10px;
+  }
+}

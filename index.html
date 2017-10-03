@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Simon Game</title>
+	<meta charset="UTF-8" >
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	
+	<!--Loading Bootstrap-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	 <!--Loading Animate CSS-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+   <!--Loading CSS-->
+  <link rel="stylesheet" href="style.css">
+  <style>
+  @import url('https://fonts.googleapis.com/css?family=Unica+One');
+  @import url('https://fonts.googleapis.com/css?family=Cutive+Mono');
+  </style>
+  </head>
+<body>
+<audio src="https://www.soundjay.com/button/sounds/button-37.mp3" id="audio1" type="audio/mpeg"></audio>
+<audio src="https://www.soundjay.com/button/sounds/button-34.mp3" id="audio2" type="audio/mpeg"></audio>
+<audio src="https://www.soundjay.com/button/sounds/button-40.mp3" id="audio3" type="audio/mpeg"></audio>
+<audio src="https://www.soundjay.com/button/sounds/button-41.mp3" id="audio4" type="audio/mpeg"></audio>
+<audio src="https://www.soundjay.com/button/sounds/button-14.mp3" id="start" type="audio/mpeg"></audio>
+<audio src="https://www.soundjay.com/button/sounds/button-33a.mp3" id="stop" type="audio/mpeg"></audio>
+<audio src="https://www.soundjay.com/button/sounds/button-42.mp3" id="reset" type="audio/mpeg"></audio>
+<audio src="https://www.soundjay.com/button/sounds/beep-03.mp3" id="fail" type="audio/mpeg"></audio>
+<audio src="https://www.soundjay.com/button/sounds/button-11.mp3" id="strict" type="audio/mpeg"></audio>
+
+
+<div class="bg">
+  <div class="container">
+    <header class="text-center">
+      <h4 class="count">Count <span class="countDisp">--</span></h4>
+      <div class="alert alert-danger info">
+        <strong>Wrong!! Try Again</strong>
+      </div>
+    </header>
+
+    <div class="wrapper">
+      <div class="content">
+        <div class="box box1" id="1"></div>
+        <div class="box box2" id="2"></div>
+        <div class="box box3" id="3"></div>
+        <div class="box box4" id="4"></div>
+      </div>
+    </div>
+    <div class="text-center">
+      <h3 class="stTitle">Strict Mode</h3>
+      <label class="switch">
+          <input type="checkbox" id="strictChange" value="strict">
+          <span class="slider round" 
+                title="Strict Mode"
+                data-toggle="popover"
+                data-trigger="hover"          
+                data-content="If ON, the game will reset after every failed attempt.">
+                </span>
+        </label>
+      <br>
+      <button class="btn btn-success start">Start</button>
+      <button class="btn btn-success reset">Reset</button>
+    </div>
+    <div id="winModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h3 class="modal-title animated pulse">Congratulations</h3>
+          </div>
+          <div class="modal-body text-center">
+            <p>You have completed all 20 steps</p>
+            <p>Click Reset to play again</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Loading jQuery-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!--Loading Javascript-->
+<script src="script.js"></script>	
+</body>
